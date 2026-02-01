@@ -16,7 +16,7 @@ html {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
@@ -68,11 +68,41 @@ nav {
 .hero {
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
+    gap: 48px;
     padding: 0 24px;
-    max-width: 600px;
+    max-width: 900px;
     margin: 0 auto;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 400px;
+}
+
+.hero-phone {
+    width: 280px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+@media (max-width: 700px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-phone {
+        width: 220px;
+        margin-top: 24px;
+    }
 }
 
 .hero h1 {
@@ -140,8 +170,25 @@ section > .container > p {
     border-top: 1px solid var(--border);
 }
 
+.solution-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+}
+
+.solution-phone {
+    width: 280px;
+    height: auto;
+    flex-shrink: 0;
+}
+
 .steps {
-    margin-top: 48px;
+    margin-top: 0;
 }
 
 .step {
@@ -195,6 +242,19 @@ section > .container > p {
 /* Privacy */
 .privacy {
     border-top: 1px solid var(--border);
+}
+
+@media (max-width: 700px) {
+    .solution-container {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .solution-phone {
+        width: 220px;
+        order: -1;
+        align-self: center;
+    }
 }
 
 /* Download */
@@ -251,8 +311,8 @@ footer .container {
 
 /* Content Pages */
 .page-content {
-    padding-top: 120px;
-    padding-bottom: 80px;
+    padding-top: 100px;
+    padding-bottom: 60px;
 }
 
 .page-content h1 {
@@ -264,11 +324,12 @@ footer .container {
 .last-updated {
     font-size: 13px;
     color: var(--text-muted);
-    margin-bottom: 64px;
+    margin-bottom: 32px;
 }
 
-.content-section {
-    margin-bottom: 48px;
+.page-content .content-section {
+    margin-bottom: 28px;
+    padding: 0;
 }
 
 .content-section h2 {
@@ -308,7 +369,7 @@ footer .container {
 
 /* FAQ */
 .faq {
-    margin-bottom: 32px;
+    margin-bottom: 24px;
 }
 
 .faq h3 {
