@@ -145,17 +145,21 @@ section > .container > p {
 }
 
 .step {
-    margin-bottom: 24px;
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
 }
 
 .step-number {
-    display: none;
+    color: var(--text-muted);
+    font-size: 14px;
+    flex-shrink: 0;
 }
 
 .step p {
     font-size: 15px;
     color: var(--text-muted);
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
 /* Features */
